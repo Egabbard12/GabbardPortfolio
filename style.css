@@ -8,8 +8,8 @@ body {
 header {
     align-self: center;
     justify-content: center;
-    font-size: 40px;
-    background: linear-gradient(to right top, white, grey)
+    font-size: 35px;
+    color: white;
 
 }
 
@@ -54,4 +54,8 @@ nav ul li::before {
 
 nav ul li:hover::before {
 	transform: scale(7);
+}
+
+.aboutme {
+	display: none;
 }
