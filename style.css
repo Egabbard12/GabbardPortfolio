@@ -1,61 +1,143 @@
+/* Global element styles */
 body {
-	margin: 0;
-	height: 100vh;
-	display: flex;
-    flex-direction: column;
-	background: linear-gradient(to right bottom, blue, chocolate);
+  margin: 0; /* Remove default margin */
+  height: 100vh; /* Full viewport height */
+  background: linear-gradient(to right bottom, blue, chocolate); /* Gradient background */
 }
+
+/* Set the same font size for all headers */
+h1, h2, h3, h4, h5, h6 {
+	font-size: 24px; /* Set your desired font size */
+  }
+
 header {
-    align-self: center;
-    justify-content: center;
-    font-size: 35px;
-    color: white;
-
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-self: center; /* Center content vertically */
+  overflow: auto; /* Enable scrolling if needed */
+  text-align: center; /* Center text */
+  font-size: 35px; /* Font size */
+  color: white; /* Text color */
 }
 
-nav ul{
-	list-style-type: none;
-    align-items: start;
-    justify-content: center;
-	padding: 0;
+nav ul {
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: start; /* Align items to the start */
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
 }
 
 nav ul li {
-	font-size: 20px;
-	font-family: sans-serif;
-	background-color: white;
-	border: 2px solid black;
-	letter-spacing: 0.1em;
-	width: 5em;
-	height: 1.5em;
-	line-height: 1.5em;
-	position: relative;
-	overflow: hidden;
-	margin: 0.5em;
-	cursor: pointer;
+  position: relative; /* Position relative for pseudo-elements */
+  display: block; /* Block display */
+  width: 5em; /* Fixed width */
+  height: 1.5em; /* Fixed height */
+  margin: 0.5em; /* Margin around each item */
+  padding: 0; /* Remove default padding */
+  font-family: sans-serif; /* Font family */
+  font-size: 20px; /* Font size */
+  line-height: 1.5em; /* Line height */
+  letter-spacing: 0.1em; /* Letter spacing */
+  color: black; /* Text color */
+  background-color: white; /* Background color */
+  border: 2px solid black; /* Border style */
+  cursor: pointer; /* Pointer cursor on hover */
+  overflow: hidden; /* Hide overflow */
 }
 
 nav ul li span {
-	color: white;
-	mix-blend-mode: difference;
+	color: white; /* Text color */
+	mix-blend-mode: difference; /* Blend mode */
+  }
+  
+  nav ul li::before {
+	content: ''; /* Empty content */
+	position: absolute; /* Absolute positioning */
+	width: 1.5em; /* Fixed width */
+	height: inherit; /* Inherit height */
+	background-color: black; /* Background color */
+	border-radius: 50%; /* Rounded corners */
+	top: 0; /* Top position */
+	left: -0.75em; /* Left position */
+	transition: 0.5s ease-out; /* Transition effect */
+  }
+  
+  nav ul li:hover::before {
+	transform: scale(7); /* Scale on hover */
+  }
+
+/* Class styles */
+.clickable {
+  cursor: pointer; /* Pointer cursor on hover */
+  text-decoration: underline; /* Underline text */
 }
 
-nav ul li::before {
-	content: '';
-	position: absolute;
-	width: 1.5em;
-	height: inherit;
-	background-color: black;
-	border-radius: 50%;
-	top: 0;
-	left: -0.75em;
-	transition: 0.5s ease-out;
+.content {
+  display: none; /* Hide content by default */
+  margin-top: 20px; /* Top margin */
+  padding: 10px; /* Padding */
 }
 
-nav ul li:hover::before {
-	transform: scale(7);
+/* ID styles */
+#aboutContent {
+  display: flex; /* Flexbox layout */
+  flex: 1; /* Flex grow */
+  text-align: center; /* Center text */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
 }
 
-.aboutme {
-	display: none;
+#projectsContent {
+  display: flex; /* Flexbox layout */
+  flex: 1; /* Flex grow */
+  text-align: center; /* Center text */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
 }
+
+#workContent {
+  display: flex; /* Flexbox layout */
+  flex: 1; /* Flex grow */
+  text-align: center; /* Center text */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+#contactContent {
+  display: flex; /* Flexbox layout */
+  flex: 1; /* Flex grow */
+  text-align: center; /* Center text */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+#blogContent {
+  display: flex; /* Flexbox layout */
+  flex: 1; /* Flex grow */
+  text-align: center; /* Center text */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+#socialsContent {
+  display: flex; /* Flexbox layout */
+  flex: 1; /* Flex grow */
+  text-align: center; /* Center text */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+
+  body {
+    height: 100%; /* Full height */
+  }
+}
+
