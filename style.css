@@ -3,12 +3,16 @@ body {
   margin: 0; /* Remove default margin */
   height: 100vh; /* Full viewport height */
   background: linear-gradient(to right bottom, blue, chocolate); /* Gradient background */
+  font-family: Arial, sans-serif; /* Consistent font family */
+  color: #333; /* Default text color */
 }
 
 /* Set the same font size for all headers */
 h1, h2, h3, h4, h5, h6 {
-	font-size: 24px; /* Set your desired font size */
-  }
+  font-size: 24px; /* Set your desired font size */
+  font-weight: bold; /* Bold font for headings */
+  color: #333; /* Heading color */
+}
 
 header {
   display: flex; /* Flexbox layout */
@@ -18,6 +22,7 @@ header {
   text-align: center; /* Center text */
   font-size: 35px; /* Font size */
   color: white; /* Text color */
+  padding: 20px; /* Padding for header */
 }
 
 nav ul {
@@ -26,6 +31,7 @@ nav ul {
   align-items: start; /* Align items to the start */
   list-style-type: none; /* Remove default list styling */
   padding: 0; /* Remove default padding */
+  margin: 20px 0; /* Margin for spacing */
 }
 
 nav ul li {
@@ -75,8 +81,12 @@ nav ul li span {
 
 .content {
   display: none; /* Hide content by default */
-  margin-top: 20px; /* Top margin */
-  padding: 10px; /* Padding */
+  width: 70%; /* Set width to 70% of the screen */
+  margin: 20px auto; /* Center content horizontally with margin */
+  padding: 20px; /* Padding inside the content */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* ID styles */
@@ -89,7 +99,6 @@ nav ul li span {
 }
 
 #projectsContent {
-  display: flex; /* Flexbox layout */
   flex: 1; /* Flex grow */
   text-align: center; /* Center text */
   align-items: center; /* Center items vertically */
@@ -97,7 +106,6 @@ nav ul li span {
 }
 
 #workContent {
-  display: flex; /* Flexbox layout */
   flex: 1; /* Flex grow */
   text-align: center; /* Center text */
   align-items: center; /* Center items vertically */
@@ -105,7 +113,6 @@ nav ul li span {
 }
 
 #contactContent {
-  display: flex; /* Flexbox layout */
   flex: 1; /* Flex grow */
   text-align: center; /* Center text */
   align-items: center; /* Center items vertically */
@@ -113,7 +120,6 @@ nav ul li span {
 }
 
 #blogContent {
-  display: flex; /* Flexbox layout */
   flex: 1; /* Flex grow */
   text-align: center; /* Center text */
   align-items: center; /* Center items vertically */
@@ -121,7 +127,6 @@ nav ul li span {
 }
 
 #socialsContent {
-  display: flex; /* Flexbox layout */
   flex: 1; /* Flex grow */
   text-align: center; /* Center text */
   align-items: center; /* Center items vertically */
